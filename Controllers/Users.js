@@ -1,6 +1,6 @@
 const { json } = require("body-parser");
 
-const UserInfo = (req, res) => {
+const Users = (req, res) => {
   const { ID, Amount, SplitInfo,Currency,CustomerEmail} = req.body;
   if (toString(ID).trim().length < 1 || isNaN(ID) ){
  return res.status(400).json("invalid ID!(ID must be a number)")
@@ -80,5 +80,5 @@ SortArray("RATIO");
 
 
 module.exports = {
-  UserInfo: UserInfo,
+  Users: Users,
 };

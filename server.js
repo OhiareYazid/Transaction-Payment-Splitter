@@ -1,24 +1,25 @@
 const express = require('express');
-const bodyParser = require('body-parser'); // latest version of exressJS now comes with Body-Parser!
+const bodyParser = require('body-parser'); //Body parser Deprecated!
 const cors = require('cors');
-const UserInfo = require('./Controllers/UserInfo');
+const Users = require('./Controllers/Users');
 
+// set the port
 
-
+const port = process.env.PORT || 8082;
 
 
 
 const app = express();
-
 app.use(cors())
-app.use(express.json()); // latest version of exressJS now comes with Body-Parser!
-app.use(bodyParser.json());
+app.use(express.json()); // Has body-parser!
 
 
 
 app.post('/split-payments/compute', (req,res) => {UserInfo.UserInfo(req,res)})
 
 
-app.listen(process.env.PORT || 3000, ()=> {
-  console.log(`app is running on port ${process.env.PORT || 3000}`);
-})
+
+app.listen( port, () => {
+  console.log( `server running http://localhost:${ port }` );
+  console.log( `press CTRL+C to stop server` );
+});
