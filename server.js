@@ -15,7 +15,7 @@ app.use(express.json()); // Has body-parser!
 
 
 
-app.post('/split-payments/compute', (req,res) => {UserInfo.UserInfo(req,res)})
+app.post('/split-payments/compute', (req,res) => {Users.Users(req,res)})
 
 
 
