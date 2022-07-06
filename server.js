@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser'); // latest version of exressJS now comes with Body-Parser!
 const cors = require('cors');
-const UserInfo = require('./control/UserInfo');
+const UserInfo = require('./Controllers/UserInfo');
 
 
 
